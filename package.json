@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Afiefanugrah/Aplikasi-Pengelola-Tugas/issues"
   },
-  "homepage": "https://github.com/Afiefanugrah/Aplikasi-Pengelola-Tugas#readme"
+  "homepage": "https://github.com/Afiefanugrah/Aplikasi-Pengelola-Tugas#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
