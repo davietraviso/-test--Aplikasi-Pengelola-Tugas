@@ -1,0 +1,19 @@
+{
+  "name": "aplikasi-pengelola-tugas",
+  "version": "1.0.0",
+  "description": "Buat API CRUD untuk aplikasi pengelola tugas (to-do list) menggunakan Node.js dan Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afiefanugrah/Aplikasi-Pengelola-Tugas.git"
+  },
+  "author": "M. Afief Anugrah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Afiefanugrah/Aplikasi-Pengelola-Tugas/issues"
+  },
+  "homepage": "https://github.com/Afiefanugrah/Aplikasi-Pengelola-Tugas#readme"
+}
