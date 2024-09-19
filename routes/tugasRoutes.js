@@ -1,7 +1,8 @@
 const express = require('express')
-const route = express.Router()
+const router = express.Router()
+const TugasModel = require('../models/tugasModel')
 
-route.get('/', async (req, res) => {
+router.get('/', async (req, res) => {
   res.status(200).json({
     metadata: "tugas enpoind"
   })
@@ -9,4 +10,4 @@ route.get('/', async (req, res) => {
 
 
 
-module.exports = route
+module.exports = router
