@@ -9,5 +9,14 @@ router.get('/', async (req, res) => {
 })
 
 
+router.post('/', async (req, res) => {
+  const {title, description} = req.body
+  res.status(201).json({
+    data: {title, description},
+    metadata: "text  berhasil di tambahkan"
+  })
+})
+
+
 
 module.exports = router
