@@ -5,7 +5,7 @@ const tugasEnpoint = require('./routes/tugasRoutes')
 
 const app = express()
 
-app.use('/tugas', tugasEnpoint)
+app.use('/tasks', tugasEnpoint)
 
 
 
