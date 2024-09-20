@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const TugasModel = require('../models/tugasModel')
+const Tugas = require('../models/tugasModel')
 
 router.get('/', async (req, res) => {
   const {title, description} = req.body
@@ -40,6 +41,20 @@ router.put('/:id', async (req, res) => {
       metadata: "text  berhasil di update"
     })
   }
+})
+
+router.delete('/:id', async (req, res) => {
+  const {id} = req.params
+  const tasks = await TugasModel.findByPk(id)
+  if(!tasks) {
+    return res.status(404).json({error: "id invalid"})
+  }
+  await tasks.destroy()
+  res.status(201).json({
+    // data: ,
+    metadata: "text  berhasil di delete"
+  })
+  
 })
 
 module.exports = router
