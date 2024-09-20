@@ -49,9 +49,9 @@ router.delete('/:id', async (req, res) => {
   if(!tasks) {
     return res.status(404).json({error: "id invalid"})
   }
-  await tasks.destroy()
+  const deldata = await tasks.destroy()
   res.status(201).json({
-    // data: ,
+    data: deldata,
     metadata: "text  berhasil di delete"
   })
   
