@@ -54,7 +54,6 @@ router.delete('/:id', async (req, res) => {
     data: deldata,
     metadata: "text di atas berhasil delete"
   })
-  
 })
 
 module.exports = router
