@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const TugasModel = require('../models/tugasModel')
-const Tugas = require('../models/tugasModel')
 
 router.get('/', async (req, res) => {
   const {title, description} = req.body
