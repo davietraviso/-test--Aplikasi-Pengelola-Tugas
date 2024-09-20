@@ -28,13 +28,12 @@ router.put('/:id', async (req, res) => {
   const {id} = req.params
   const {title, description} = req.body
   const tasks = await TugasModel.findByPk(id)
-  res.json(tasks)
-  // if(tasks === true) {
-  //   res.status(201).json({
-  //     data: tasks,
-  //     metadata: "text  berhasil di tambahkan"
-  //   })
-  // }
+  if(tasks) {
+    res.status(201).json({
+      data: tasks,
+      metadata: "text  berhasil di tambahkan"
+    })
+  }
 })
 
 
