@@ -52,7 +52,7 @@ router.delete('/:id', async (req, res) => {
   const deldata = await tasks.destroy()
   res.status(201).json({
     data: deldata,
-    metadata: "text  berhasil di delete"
+    metadata: "text di atas berhasil delete"
   })
   
 })
