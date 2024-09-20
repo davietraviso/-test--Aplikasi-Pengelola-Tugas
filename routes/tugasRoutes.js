@@ -26,9 +26,15 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   const {id} = req.params
-  const {title, description} = req.body
   const tasks = await TugasModel.findByPk(id)
-  if(tasks) {
+  if(!tasks) {
+    return res.status(400).json({error: "id invalid"})
+  }
+  const {title, description} = req.body
+  const update = await tasks.update({
+    title, description
+  })
+  if(update) {
     res.status(201).json({
       data: tasks,
       metadata: "text  berhasil di tambahkan"
